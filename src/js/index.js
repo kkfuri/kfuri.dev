@@ -1,3 +1,3 @@
-window.onload = async () => {
-  console.log(await fetch(`https://api.github.com/users/kkfuri`));
+window.onload = () => {
+  setTimeout(() => (document.getElementById("card").className = "show"), 400);
 };
