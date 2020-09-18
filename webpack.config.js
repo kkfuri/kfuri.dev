@@ -1,6 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: ["./src/js/index.js", "./src/css/index.scss"],
@@ -36,6 +37,11 @@ module.exports = {
     port: 9000,
   },
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, "./src/assets"), to: "assets" },
+      ],
+    }),
     new HtmlWebpackPlugin({
       inject: true,
       hash: false,
