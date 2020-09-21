@@ -1,0 +1,109 @@
+#presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .card {
+    padding: 2em;
+    margin: 0 2em;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    border-radius: 3px;
+    background-color: $primary;
+    transition: opacity 0.8s ease;
+    box-shadow: -4px -4px 12px rgba(0, 0, 0, 0.1),
+      4px 4px 8px rgba(0, 0, 0, 0.2);
+    &.show {
+      opacity: 1;
+    }
+    img {
+      width: 100%;
+      max-width: 240px;
+      margin: 0 auto;
+      border-radius: 3px;
+      box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.1),
+        4px 4px 4px rgba(0, 0, 0, 0.2);
+      filter: grayscale(100%);
+    }
+    h1 {
+      font-size: 3.6em;
+      line-height: 1.6em;
+      font-weight: bold;
+      color: #f9f9f9;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+        -1px 1px 0 #000, 1px 1px 0 #000;
+      color: #f9f9f9;
+      @supports (-webkit-text-stroke: 1px $text-color) {
+        -webkit-text-stroke: 1px $text-color;
+      }
+    }
+    h2 {
+      font-size: 1.8em;
+      font-weight: bold;
+      letter-spacing: 0.04rem;
+      color: $text-color;
+    }
+    ul {
+      margin: 12px 0;
+      display: flex;
+      font-size: 1.8em;
+      li {
+        color: $text-color;
+        cursor: pointer;
+        transition: color 0.4s;
+        padding: 4px;
+        a,
+        a:any-link {
+          color: currentColor;
+        }
+      }
+      li:hover {
+        color: #f9f9f9;
+      }
+      li + * {
+        margin-left: 8px;
+      }
+    }
+    .tech {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.6em;
+      color: #070707;
+      > span + * {
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $low-laptop) {
+  #presentation {
+    .card {
+      padding: 4.5em;
+      > * {
+        user-select: none;
+      }
+      img {
+        width: 100%;
+        max-width: 460px;
+      }
+      h1 {
+        font-size: 4.8em;
+      }
+      h2 {
+        font-size: 2.4em;
+      }
+      ul {
+        font-size: 2.4em;
+      }
+      .tech {
+        font-size: 2em;
+        > span + * {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

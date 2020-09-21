@@ -11,5 +11,8 @@ window.onload = () => {
     `%c contact email: kkfuri@gmail.com`,
     "color: #ffd000; padding: 12px 40px; background-color: black;"
   );
-  setTimeout(() => (document.getElementById("card").className = "show"), 400);
+  setTimeout(
+    () => document.querySelector("#presentation .card").classList.add("show"),
+    400
+  );
 };

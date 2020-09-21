@@ -1,0 +1,119 @@
+#projects {
+  scroll-snap-align: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(255, 252, 155);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 252, 155, 1) 0%,
+    rgba(255, 252, 155, 0.8) 80%,
+    rgba(255, 252, 155, 0.2) 100%
+  );
+  a,
+  :any-link {
+    text-decoration: underline;
+    color: $text-color;
+  }
+  .align {
+    scroll-margin: 0;
+    padding: 8em 2em;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+
+    h3 {
+      font-size: 2.8em;
+      line-height: 2em;
+      border-radius: 4px;
+      padding: 0 2em;
+      font-weight: bold;
+      background-color: $primary;
+      color: $text-color;
+      box-shadow: -4px -4px 12px rgba(0, 0, 0, 0.1),
+        4px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+      margin: 4em 0;
+      li {
+        padding: 1em;
+        + * {
+          margin-top: 4em;
+        }
+        h4 {
+          font-size: 2.4em;
+          line-height: 2em;
+          text-align: center;
+          font-weight: bold;
+          margin-bottom: 0.4em;
+        }
+      }
+    }
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  p {
+    font-size: 1.6em;
+    line-height: 1.6em;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: -4px -4px 12px rgba(0, 0, 0, 0.1),
+      4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .project-description {
+    margin-top: 16px;
+    strong {
+      font-weight: bold;
+    }
+    .links {
+      display: flex;
+      font-size: 1.4em;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 8px;
+      padding: 12px;
+      justify-content: center;
+      span {
+        background-color: $primary;
+        border-radius: 12px;
+        text-transform: uppercase;
+        user-select: none;
+        letter-spacing: 0.2rem;
+        padding: 4px 8px;
+        margin: 4px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $low-laptop) {
+  .project {
+    flex-direction: row;
+    p {
+      font-size: 1.6em;
+      line-height: 1.6em;
+    }
+    img {
+      max-width: 65%;
+      border-radius: 4px;
+      box-shadow: -4px -4px 12px rgba(0, 0, 0, 0.1),
+        4px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .project-description {
+      margin-top: 0;
+      margin-left: 32px;
+    }
+  }
+}
