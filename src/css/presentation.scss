@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 480px;
   height: 100vh;
   .card {
     padding: 2em;
@@ -13,8 +14,7 @@
     border-radius: 3px;
     background-color: $primary;
     transition: opacity 0.8s ease;
-    box-shadow: -4px -4px 12px rgba(0, 0, 0, 0.1),
-      4px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: -4px -4px 12px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.2);
     &.show {
       opacity: 1;
     }
@@ -23,8 +23,7 @@
       max-width: 240px;
       margin: 0 auto;
       border-radius: 3px;
-      box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.1),
-        4px 4px 4px rgba(0, 0, 0, 0.2);
+      box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.1), 4px 4px 4px rgba(0, 0, 0, 0.2);
       filter: grayscale(100%);
     }
     h1 {
@@ -32,8 +31,7 @@
       line-height: 1.6em;
       font-weight: bold;
       color: #f9f9f9;
-      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-        -1px 1px 0 #000, 1px 1px 0 #000;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
       color: #f9f9f9;
       @supports (-webkit-text-stroke: 1px $text-color) {
         -webkit-text-stroke: 1px $text-color;
@@ -80,6 +78,7 @@
 
 @media screen and (min-width: $low-laptop) {
   #presentation {
+    min-height: 720px;
     .card {
       padding: 4.5em;
       > * {
