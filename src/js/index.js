@@ -14,9 +14,12 @@ window.onload = () => {
     "color: #ffd000; padding: 12px 40px; background-color: black;"
   );
 
+  loadDates();
+
   // load card
   setTimeout(
-    () => document.querySelector("#presentation .card").classList.add("show"),
+    () =>
+      document.querySelector("#presentation .centered").classList.add("show"),
     400
   );
 
@@ -64,4 +67,27 @@ function generateProject(project) {
   const element = document.createElement("li");
   element.innerHTML = generatedHtml;
   return element;
+}
+
+document.getElementById("arrow").onclick = () => {
+  document.getElementById("personal-information").classList.toggle("open");
+  document.getElementById("arrow").classList.toggle("open");
+};
+
+function loadDates() {
+  const today = new Date();
+  const birthDate = new Date("01/24/1998");
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const todayMonth = today.getMonth();
+  const birthMonth = birthDate.getMonth();
+  const workingTime = today.getFullYear() - 2018;
+  if (
+    todayMonth < birthMonth ||
+    (todayMonth == birthMonth && today.getDate() < birthDate.getDate())
+  ) {
+    age--;
+  }
+  document.getElementById("age").textContent = age;
+  document.getElementById("working").textContent = workingTime;
+  return;
 }
