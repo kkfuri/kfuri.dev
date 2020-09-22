@@ -4,18 +4,27 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: ["./src/js/index.js", "./src/css/index.scss"],
+  entry: ["./src/js/index.ts", "./src/css/index.scss"],
   output: {
     filename: "app.js",
     path: path.resolve(__dirname, "dist"),
   },
   mode: process.env.NODE_ENV !== "production" ? "development" : "production",
+  resolve: {
+    extensions: [".ts", ".js", ".json"],
+  },
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: "babel-loader",
+        use: ["source-map-loader"],
+        enforce: "pre",
       },
       {
         test: /\.scss$/,
