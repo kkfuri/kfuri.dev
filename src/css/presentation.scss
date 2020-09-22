@@ -108,7 +108,7 @@
     font-size: 1.4em;
     line-height: 1.2em;
   }
-  &.open {
+  &[aria-hidden="false"] {
     opacity: 1;
     transform: translateX(100%);
   }
@@ -134,7 +134,7 @@
     cursor: pointer;
     transition: color 0.4s;
 
-    &.open {
+    &[aria-pressed="true"] {
       color: #f9f9f9;
     }
     &:hover {
