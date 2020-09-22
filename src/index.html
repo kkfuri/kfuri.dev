@@ -77,8 +77,17 @@
     <!-- google-fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
+      as="style"
+      rel="preload"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css?family=Noto+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
   </head>
   <body id="app">
     <section id="presentation">
