@@ -21,19 +21,20 @@ export function generateProject(project: ProjectTypes) {
       />
       <div class="project-description">
         <div class="links">
-            <a
-              href="${project.repo}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              repository link
-            </a>
           <a
-          href="${project.link}"
+            href="${project.repo}"
             target="_blank"
             rel="noopener noreferrer"
-            >project page</a
-          >
+            alt="repository link for ${project.name}">
+            repository link
+          </a>
+          <a
+            href="${project.link}"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="project link for ${project.name}">
+            project page
+          </a>
         </div>
         <p>
           ${project.description}
