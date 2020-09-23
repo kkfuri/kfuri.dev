@@ -47,7 +47,7 @@ export default [
     id: 3,
     name: "Pop Blog",
     placeholder:
-      "https://github.com/kkfuri/gatsby-anime-blog/raw/master/git/page.png?raw=true",
+      "https://github.com/kkfuri/gatsby-anime-blog/raw/master/.github/page.gif?raw=true",
     repo: "https://github.com/kkfuri/gatsby-anime-blog",
     link: "https://pop-blog.vercel.app/",
     description: `A blog made for a friend who wanted to write his ideas about
