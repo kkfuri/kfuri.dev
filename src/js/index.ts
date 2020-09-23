@@ -9,10 +9,10 @@ import "./modules/darkMode";
 
 import projectsData from "../data/projects.js";
 
+addClassToCard();
 window.onload = () => {
   consoleMessage("kkfuri@gmail.com");
   loadDates({ birth: "01/24/1998", workingYear: 2018 });
-  addClassToCard();
 
   projectsData.forEach((proj) => {
     const element = generateProject(proj);
