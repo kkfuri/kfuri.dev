@@ -5,6 +5,7 @@ import {
   generateProject,
 } from "./modules/index";
 import "./modules/personalInformation";
+import "./modules/darkMode";
 
 import projectsData from "../data/projects.js";
 

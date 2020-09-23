@@ -1,3 +1,10 @@
+.dark {
+  #projects {
+    background: rgba(40, 49, 65);
+    background: linear-gradient(0deg, rgba(40, 49, 65, 1) 0%, rgba(40, 49, 65, 0.8) 80%, rgba(40, 49, 65, 0.2) 100%);
+  }
+}
+
 #projects {
   scroll-snap-align: none;
   display: flex;
@@ -22,6 +29,7 @@
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    color: $text-color;
 
     h3 {
       font-size: 2em;
@@ -30,7 +38,7 @@
       padding: 0 2em;
       font-weight: bold;
       background-color: $primary;
-      color: $text-color;
+      color: #0e1111;
       box-shadow: -4px -4px 12px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
@@ -85,6 +93,7 @@
       justify-content: center;
       span {
         background-color: $primary;
+        color: #0e1111;
         border-radius: 12px;
         text-transform: uppercase;
         user-select: none;
