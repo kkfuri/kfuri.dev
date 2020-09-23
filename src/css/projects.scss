@@ -61,6 +61,10 @@
   }
 }
 
+.dark .project img {
+  box-shadow: -4px -4px 12px rgba(255, 255, 255, 0.2), 4px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
 .project {
   display: flex;
   flex-direction: column;
@@ -72,7 +76,7 @@
   img {
     max-width: 100%;
     border-radius: 4px;
-    box-shadow: -4px -4px 12px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: -4px -4px 12px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.2);
   }
   .project-description {
     margin-top: 16px;
