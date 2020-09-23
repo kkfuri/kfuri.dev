@@ -3,17 +3,19 @@
 $low-laptop: 1024px;
 
 :root {
+  --var-primary: #ffd000;
   --var-text-color: #0e1111;
   --var-contrast-color: #f9f9f9;
 }
 .dark {
+  --var-primary: #9c92ac;
   --var-text-color: #f9f9f9;
   --var-contrast-color: #0e1111;
 }
 
-$primary: #ffd000;
+$primary: var(--var-primary);
 $text-color: var(--var-text-color);
-$contrast-color: var(--var-contrast- color);
+$contrast-color: var(--var-contrast-color);
 
 html {
   font-family: "Noto Sans", sans-serif;
@@ -31,23 +33,23 @@ body {
   }
 }
 
-.dark {
-  #dark-mode {
-    background-color: $primary;
-    color: #283141;
-  }
-}
 #dark-mode {
   z-index: 4;
   position: fixed;
+  font-size: 2.4em;
   right: 12px;
   top: 12px;
   border: 0;
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
-  background-color: #283141;
-  color: #f9f9f9;
-  border-radius: 4px;
+  background-color: $primary;
+  color: #283141;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  &:focus {
+    border: 1px solid $text-color;
+    outline: 0;
+  }
 }
 
 * {
