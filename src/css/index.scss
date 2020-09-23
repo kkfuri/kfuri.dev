@@ -33,6 +33,10 @@ body {
   }
 }
 
+.dark #dark-mode {
+  box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.1), 4px 4px 4px rgba(255, 255, 255, 0.2);
+}
+
 #dark-mode {
   z-index: 4;
   position: fixed;
@@ -46,6 +50,7 @@ body {
   color: #283141;
   border-radius: 2px;
   border: 1px solid transparent;
+  box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.1), 4px 4px 4px rgba(0, 0, 0, 0.2);
   &:focus {
     border: 1px solid $text-color;
     outline: 0;
