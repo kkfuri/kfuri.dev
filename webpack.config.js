@@ -2,6 +2,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   entry: ["./src/js/index.ts", "./src/css/index.scss"],
@@ -58,5 +59,6 @@ module.exports = {
       template: path.resolve(__dirname, "./src/index.html"),
     }),
     new MiniCssExtractPlugin(),
+    new CompressionPlugin(),
   ],
 };
