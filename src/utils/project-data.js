@@ -1,6 +1,30 @@
 export default [
   {
     id: 1,
+    name: "Dailymon",
+    placeholder:
+      "https://github.com/kkfuri/gatsby-anime-blog/raw/master/.github/page.gif?raw=true",
+    repo: "https://github.com/kkfuri/dailymon",
+    link: "https://dailymon.vercel.app/",
+    description: `A website built to try out react-query and the new version of some cool libraries. This project brought challenges such as concurrent api calls and how to deal with empty spaces. Was a challenge to improve the first image/pixel brought to the user as it loads. The colors are evaluated by the pokemon type and it generates all the palette.
+    <br />
+    Developed with React using <strong>Next.js</strong>. The styling and design was built while I coded with the hlep of Chakra UI. The animation was
+    built with <strong>framer motion</strong>. The color palette is being created with the pokemon type and <strong>chroma-js</strong>.Deployment was done using
+    <strong>Vercel</strong>. The data is obtained from a public API called pokeapi and daily a webhook triggers a new build with a new dailymon.`,
+    tech: [
+      "React",
+      "Next.js",
+      "react-query",
+      "SEO",
+      "Daily deploys with hooks",
+      "Chakra UI",
+      "Framer Motion",
+      "Typescript",
+      "Vercel",
+    ],
+  },
+  {
+    id: 2,
     name: "Pop Blog",
     placeholder:
       "https://github.com/kkfuri/gatsby-anime-blog/raw/master/.github/page.gif?raw=true",
@@ -34,7 +58,7 @@ export default [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "Covid no Brasil",
     placeholder:
       "https://github.com/kkfuri/svelte-covid/raw/master/.github/covid.gif?raw=true",
@@ -53,7 +77,7 @@ export default [
     tech: ["Svelte", "Sapper", "CSS", "Axios", "Vercel", "Javascript"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Superheroes",
     placeholder:
       "https://github.com/kkfuri/superheroes/raw/master/.github/superheroes.gif?raw=true",
