@@ -27,7 +27,7 @@ export default function Project({
           })}
         >
           <div className="flex flex-col">
-            <h1 className="text-6xl font-bold leading-relaxed text-center lg:text-left">
+            <h1 className="mt-4 text-2xl font-bold leading-relaxed text-center lg:my-0 lg:text-6xl lg:text-left">
               {name}
             </h1>
             <p
@@ -35,10 +35,10 @@ export default function Project({
               dangerouslySetInnerHTML={{ __html: description }}
             />
           </div>
-          <ul className="flex flex-wrap items-center justify-center w-full max-w-lg gap-2 mx-auto my-12 lg:justify-start lg:max-w-md lg:mx-auto">
+          <ul className="flex flex-wrap items-center justify-center w-full max-w-lg gap-2 mx-auto my-4 lg:my-12 lg:justify-start lg:max-w-md lg:mx-auto">
             {tech.map((technology) => (
               <li
-                className="px-2 py-1 text-lg font-semibold lowercase bg-black text-gray-50 dark:text-gray-900 dark:bg-gray-50"
+                className="px-2 py-1 text-sm font-semibold lowercase bg-black lg:text-lg text-gray-50 dark:text-gray-900 dark:bg-gray-50"
                 key={technology}
               >
                 {technology}
