@@ -1,50 +1,49 @@
+import { useRouter } from "next/router";
 import Image from "next/image";
-import classnames from "classnames";
 
 import projectData from "@/utils/project-data";
+import Project from "@/components/project";
 
 export default function Projects() {
+  const router = useRouter();
+  const projectFromQuery = router.query.project
+    ? projectData.find((i) => i.id === Number(router.query.project))
+    : null;
   return (
     <div className="container min-h-screen mx-auto">
-      <div className="grid grid-cols-1 gap-20">
-        {projectData?.map((project, index) => (
-          <div
-            className="flex items-center min-h-screen mx-auto"
-            key={project.id}
-          >
-            <div
-              className={classnames("flex w-full flex-col ", {
-                "lg:flex-row-reverse": index % 2 === 0,
-                "lg:flex-row": index % 2 !== 0,
-              })}
-            >
-              <a className="flex overflow-hidden rounded-md shadow-sm-white">
-                <Image src={project.placeholder} width={771} height={450} />
-              </a>
+      {!projectFromQuery && (
+        <div className="flex-col items-center justify-center hidden min-h-screen py-8 lg:flex">
+          <h2 className="mb-8 text-sm tracking-wider md:text-xl">
+            select a project for more details
+          </h2>
+          <div className="grid grid-cols-2 gap-10 my-2">
+            {projectData?.map((project) => (
               <div
-                className={classnames("flex flex-col justify-between flex-1", {
-                  "lg:mr-12": index % 2 === 0,
-                  "lg:ml-12": index % 2 !== 0,
-                })}
+                key={project.id}
+                className="transition-transform delay-100 cursor-pointer transform-gpu hover:scale-105 group"
+                onClick={() => router.push(`/?project=${project.id}`)}
               >
-                <div className="flex flex-col">
-                  <h1 className="text-6xl font-bold leading-relaxed text-center lg:text-left">
-                    {project.name}
-                  </h1>
-                  <p
-                    className="my-2 leading-snug tracking-wide lg:max-w-md"
-                    dangerouslySetInnerHTML={{ __html: project.description }}
-                  />
+                <h3 className="mb-2 font-serif text-xl font-medium text-center transition-colors text-gray-50 group-hover:text-red-400">
+                  {project.name}
+                </h3>
+                <div className="flex items-center justify-center">
+                  <Image src={project.placeholder} width={550} height={340} />
                 </div>
-                <ul className="flex flex-wrap w-full max-w-md gap-2 mx-auto my-12 lg:mx-auto">
-                  {project.tech.map((i) => (
-                    <li className="px-2 py-1 text-gray-900 bg-gray-50" key={i}>
-                      {i}
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      )}
+      {projectFromQuery && (
+        <div className="flex-col items-center hidden min-h-screen justify-evenly lg:flex">
+          <button onClick={() => router.push("/")}>back</button>
+          <Project {...projectFromQuery} />
+        </div>
+      )}
+      <div className="grid grid-cols-1 gap-20 lg:hidden">
+        {projectData?.map((project, index) => (
+          <div className="flex flex-col items-center justify-center min-h-screen">
+            <Project {...project} twisted={index % 2 === 0} />
           </div>
         ))}
       </div>
