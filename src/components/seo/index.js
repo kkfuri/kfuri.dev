@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function SEO() {
   return (
     <Head>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {/* title */}
       <title>Diego Kfuri</title>
@@ -19,7 +19,7 @@ export default function SEO() {
       />
 
       {/* Schema.org for Google */}
-      <meta itemprop="name" content="Diego Kfuri" />
+      <meta itemProp="name" content="Diego Kfuri" />
       <meta
         itemprop="description"
         content="Personal page for Diego Kfuri, software engineer"
