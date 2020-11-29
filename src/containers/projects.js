@@ -42,7 +42,10 @@ export default function Projects() {
       )}
       <div className="grid grid-cols-1 gap-20 lg:hidden">
         {projectData?.map((project, index) => (
-          <div className="flex flex-col items-center justify-center min-h-screen">
+          <div
+            className="flex flex-col items-center justify-center min-h-screen"
+            key={project.id}
+          >
             <Project {...project} twisted={index % 2 === 0} />
           </div>
         ))}
