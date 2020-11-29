@@ -23,10 +23,10 @@ export default function Projects() {
                 className="transition-transform delay-100 cursor-pointer transform-gpu hover:scale-105 group"
                 onClick={() => router.push(`/?project=${project.id}`)}
               >
-                <h3 className="mb-2 font-serif text-xl font-medium text-center transition-colors text-gray-50 group-hover:text-red-400">
+                <h3 className="mb-2 font-serif text-xl font-medium text-center text-black transition-colors dark:text-gray-50 group-hover:text-purple-500 dark:group-hover:text-red-400">
                   {project.name}
                 </h3>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center border border-purple-200 dark:border-transparent">
                   <Image src={project.placeholder} width={550} height={340} />
                 </div>
               </div>

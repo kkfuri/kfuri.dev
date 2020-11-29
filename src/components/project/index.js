@@ -38,7 +38,7 @@ export default function Project({
           <ul className="flex flex-wrap items-center justify-center w-full max-w-lg gap-2 mx-auto my-12 lg:justify-start lg:max-w-md lg:mx-auto">
             {tech.map((technology) => (
               <li
-                className="px-2 py-1 text-lg font-thin text-gray-900 bg-gray-50"
+                className="px-2 py-1 text-lg font-semibold lowercase bg-black text-gray-50 dark:text-gray-900 dark:bg-gray-50"
                 key={technology}
               >
                 {technology}

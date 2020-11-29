@@ -4,9 +4,9 @@ import StyledText from "@/components/styled-text";
 export default function Presentation() {
   return (
     <div className="container flex flex-col items-center justify-center min-h-screen mx-auto">
-      <div className="w-full max-w-2xl p-1 mx-auto border border-red-400 shadow-sm-white">
+      <div className="w-full max-w-2xl p-1 mx-auto border border-purple-500 dark:border-red-400 shadow-sm-white">
         <div className="flex space-x-4">
-          <div className="flex items-center bg-white border border-gray200">
+          <div className="flex items-center bg-white border border-purple-300 dark:border-gray200">
             <Image
               src="https://avatars0.githubusercontent.com/u/42350846"
               width={460}

@@ -6,7 +6,9 @@ export default function StyledText({ children, separator, as, className }) {
     <Component className={className}>
       {splittedText[0]}
       {separator && (
-        <span className="font-serif font-medium text-red-400">{separator}</span>
+        <span className="font-serif font-medium text-purple-500 dark:text-red-400">
+          {separator}
+        </span>
       )}
       {splittedText[1]}
     </Component>
