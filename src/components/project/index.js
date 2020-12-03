@@ -7,6 +7,8 @@ export default function Project({
   name,
   description,
   tech,
+  repo,
+  link,
   twisted,
 }) {
   return (
@@ -17,7 +19,12 @@ export default function Project({
           "lg:flex-row": !twisted,
         })}
       >
-        <a className="flex overflow-hidden rounded-md shadow-sm-white">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex overflow-hidden rounded-md shadow-sm-white"
+        >
           <Image src={animated} width={771} height={450} loading="eager" />
         </a>
         <div
@@ -27,9 +34,29 @@ export default function Project({
           })}
         >
           <div className="flex flex-col">
-            <h1 className="mt-4 text-2xl font-bold leading-relaxed text-center lg:my-0 lg:text-6xl lg:text-left">
-              {name}
-            </h1>
+            <div className="flex flex-col items-center justify-between mt-4 lg:flex-row lg:mt-0">
+              <h1 className="mt-4 text-2xl font-bold leading-relaxed text-center lg:my-0 lg:text-6xl lg:text-left lg:mr-4">
+                {name}
+              </h1>
+              <div className="flex items-center lg:flex-col">
+                <a
+                  href={repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-purple-500 dark:hover:text-red-400"
+                >
+                  repository
+                </a>
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-4 hover:text-purple-500 dark:hover:text-red-400 lg:ml-0"
+                >
+                  project link
+                </a>
+              </div>
+            </div>
             <p
               className="my-2 leading-snug tracking-wide lg:max-w-md"
               dangerouslySetInnerHTML={{ __html: description }}

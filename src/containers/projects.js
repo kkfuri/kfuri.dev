@@ -36,7 +36,12 @@ export default function Projects() {
       )}
       {projectFromQuery && (
         <div className="flex-col items-center hidden min-h-screen justify-evenly lg:flex">
-          <button onClick={() => router.push("/")}>back</button>
+          <button
+            onClick={() => router.push("/")}
+            className="hover:text-purple-500 dark:hover:text-red-400"
+          >
+            back
+          </button>
           <Project {...projectFromQuery} />
         </div>
       )}
