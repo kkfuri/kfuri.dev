@@ -21,11 +21,11 @@ export default function SEO() {
       {/* Schema.org for Google */}
       <meta itemProp="name" content="Diego Kfuri" />
       <meta
-        itemprop="description"
+        itemProp="description"
         content="Personal page for Diego Kfuri, software engineer"
       />
       <meta
-        itemprop="image"
+        itemProp="image"
         content="https://avatars0.githubusercontent.com/u/42350846"
       />
       <meta name="twitter:card" content="summary" />

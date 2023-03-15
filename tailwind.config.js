@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [
+  content: [
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/containers/**/*.{js,ts,jsx,tsx}",
@@ -17,9 +17,6 @@ module.exports = {
         white: "0 35px 60px -15px rgba(255, 255, 255, 0.3)",
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };

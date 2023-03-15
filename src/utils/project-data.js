@@ -10,9 +10,9 @@ export default [
     link: "https://dailymon.vercel.app/",
     description: `A website built to try out react-query and the new version of some cool libraries. This project brought challenges such as concurrent api calls and how to deal with loading/empty states. Was a challenge to improve the first image/pixel brought to the user as it loads. The colors are evaluated by the pokemon type and it generates all the palette.
     <br />
-    Developed with React using <strong>Next.js</strong>. The styling and design was built while I coded with the hlep of Chakra UI. The animation was
+    Developed with React using <strong>Next.js</strong>. The styling and design was built while I coded with the help of Chakra UI. The animation was
     built with <strong>framer motion</strong>. The color palette is being created with the pokemon type and <strong>chroma-js</strong>.Deployment was done using
-    <strong>Vercel</strong>. The data is obtained from a public API called pokeapi and daily a webhook triggers a new build with a new dailymon.`,
+    <strong>Vercel</strong>. The data is obtained from a public API called pokeapi.`,
     tech: [
       "React",
       "Next.js",

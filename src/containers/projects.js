@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import Image from "next/image";
 
 import projectData from "@/utils/project-data";
 import Project from "@/components/project";
@@ -27,7 +26,12 @@ export default function Projects() {
                   {project.name}
                 </h3>
                 <div className="flex items-center justify-center border border-purple-200 dark:border-transparent">
-                  <Image src={project.placeholder} width={550} height={340} />
+                  <img
+                    alt=""
+                    src={project.placeholder}
+                    width={550}
+                    height={340}
+                  />
                 </div>
               </div>
             ))}

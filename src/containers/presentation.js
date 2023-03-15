@@ -4,10 +4,11 @@ import StyledText from "@/components/styled-text";
 export default function Presentation() {
   return (
     <div className="container flex flex-col items-center justify-center min-h-screen mx-auto">
-      <div className="w-full max-w-2xl p-1 mx-auto border border-purple-500 dark:border-red-400 shadow-sm-white">
+      <div className="w-full max-w-[460px] lg:max-w-2xl p-1 mx-auto border border-purple-500 dark:border-red-400 shadow-sm-white">
         <div className="flex flex-col lg:space-y-0 lg:space-x-4 lg:flex-row">
-          <div className="flex items-center bg-white border border-purple-300 dark:border-gray200">
+          <div className="flex items-center border border-purple-500 dark:border-red-400 mx-auto">
             <Image
+              alt="Diego Kfuri avatar"
               src="https://avatars0.githubusercontent.com/u/42350846"
               width={460}
               height={460}
@@ -28,14 +29,14 @@ export default function Presentation() {
                 as="li"
                 className="text-xs sm:text-sm lg:text-base"
               >
-                working with front-end using mainly next.js
+                lately using react, vue and svelte
               </StyledText>
               <StyledText
                 separator="&"
                 as="li"
                 className="text-xs sm:text-sm lg:text-base"
               >
-                learning typescript & nodejs
+                learning python & systems design
               </StyledText>
               <StyledText
                 separator="&"

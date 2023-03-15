@@ -1,4 +1,3 @@
-import Image from "next/image";
 import classnames from "classnames";
 
 export default function Project({
@@ -25,7 +24,7 @@ export default function Project({
           rel="noopener noreferrer"
           className="flex overflow-hidden rounded-md shadow-sm-white"
         >
-          <Image src={animated} width={771} height={450} loading="eager" />
+          <img src={animated} width={771} height={450} loading="eager" />
         </a>
         <div
           className={classnames("flex flex-col justify-between flex-1", {
