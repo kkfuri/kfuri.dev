@@ -1,5 +1,7 @@
 import { ThemeProvider } from "next-themes";
 
+import GA from "@/components/ga";
+
 import "@/utils/base.css";
 
 function MyApp({ Component, pageProps }) {
@@ -9,6 +11,7 @@ function MyApp({ Component, pageProps }) {
       defaultTheme="dark"
       disableTransitionOnChange
     >
+      <GA />
       <Component {...pageProps} />
     </ThemeProvider>
   );
