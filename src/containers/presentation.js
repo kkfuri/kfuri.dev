@@ -18,16 +18,16 @@ export default function Presentation() {
                 alt="Diego Kfuri avatar"
                 src="https://avatars0.githubusercontent.com/u/42350846"
                 width={320}
-                height={340}
+                height={320}
               />
             </div>
-            <div className="flex flex-col justify-between w-full px-4 py-2 md:py-4 lg:px-0">
+            <div className="flex flex-col justify-between w-full px-4 py-2 md:py-4 sm:px-1">
               <div className="flex-1">
-                <h1 className="font-sans text-3xl font-semibold lg:leading-snug md:text-5xl">
+                <h1 className="font-sans text-xl font-semibold sm:text-2xl lg:text-5xl">
                   Diego Kfuri
                 </h1>
                 <StyledText
-                  className="text-sm tracking-wider md:text-xl"
+                  className="text-sm tracking-wider sm:text-lg lg:text-xl"
                   separator="&"
                 >
                   software developer & curious
