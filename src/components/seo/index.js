@@ -11,7 +11,7 @@ export default function SEO() {
       {/* Search Engine */}
       <meta
         name="description"
-        content="Personal page for Diego Kfuri, software engineer"
+        content="Personal page for Diego Kfuri, software developer"
       />
       <meta
         name="image"
@@ -22,7 +22,7 @@ export default function SEO() {
       <meta itemProp="name" content="Diego Kfuri" />
       <meta
         itemProp="description"
-        content="Personal page for Diego Kfuri, software engineer"
+        content="Personal page for Diego Kfuri, software developer"
       />
       <meta
         itemProp="image"
@@ -32,9 +32,8 @@ export default function SEO() {
       <meta name="twitter:title" content="Diego Kfuri" />
       <meta
         name="twitter:description"
-        content="Personal page for Diego Kfuri, software engineer"
+        content="Personal page for Diego Kfuri, software developer"
       />
-      <meta name="twitter:site" content="@kfurinho" />
       <meta
         name="twitter:image:src"
         content="https://avatars0.githubusercontent.com/u/42350846"
@@ -44,15 +43,15 @@ export default function SEO() {
       <meta name="og:title" content="Diego Kfuri" />
       <meta
         name="og:description"
-        content="Personal page for Diego Kfuri, software engineer"
+        content="Personal page for Diego Kfuri, software developer"
       />
       <meta
         name="og:image"
         content="https://avatars0.githubusercontent.com/u/42350846"
       />
-      <meta name="og:url" content="https://kkfuri.now.sh/" />
+      <meta name="og:url" content="https://kfuri.dev/" />
       <meta name="og:site_name" content="Diego Kfuri" />
-      <meta name="og:locale" content="pt_BR" />
+      <meta name="og:locale" content="en_US" />
       <meta name="og:type" content="website" />
 
       {/* favicon */}
