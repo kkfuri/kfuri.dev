@@ -1,6 +1,6 @@
 export default [
   {
-    id: 1,
+    id: "dailymon",
     name: "Dailymon",
     placeholder:
       "https://github.com/kkfuri/dailymon/raw/main/.github/dailymon.gif?raw=true",
@@ -26,7 +26,7 @@ export default [
     ],
   },
   {
-    id: 2,
+    id: "pop-blog",
     name: "Pop Blog",
     placeholder:
       "https://github.com/kkfuri/gatsby-anime-blog/raw/master/.github/page.gif?raw=true",
@@ -62,7 +62,7 @@ export default [
     ],
   },
   {
-    id: 3,
+    id: "covid-no-brasil",
     name: "Covid no Brasil",
     placeholder:
       "https://github.com/kkfuri/svelte-covid/raw/master/.github/covid.gif?raw=true",
@@ -83,7 +83,7 @@ export default [
     tech: ["Svelte", "Sapper", "CSS", "Axios", "Vercel", "Javascript"],
   },
   {
-    id: 4,
+    id: "superheroes",
     name: "Superheroes",
     placeholder:
       "https://github.com/kkfuri/superheroes/raw/master/.github/superheroes.gif?raw=true",

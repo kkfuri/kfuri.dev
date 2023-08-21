@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import projectData from "@/utils/project-data";
 import Project from "@/components/project";
@@ -6,7 +7,7 @@ import Project from "@/components/project";
 export default function Projects() {
   const router = useRouter();
   const projectFromQuery = router.query.project
-    ? projectData.find((i) => i.id === Number(router.query.project))
+    ? projectData.find((i) => i.id === router.query.project)
     : null;
   return (
     <div className="container min-h-screen mx-auto">
@@ -17,10 +18,11 @@ export default function Projects() {
           </h2>
           <div className="grid grid-cols-2 gap-10 my-2">
             {projectData?.map((project) => (
-              <div
+              <Link
                 key={project.id}
                 className="transition-transform delay-100 cursor-pointer transform-gpu hover:scale-105 group"
-                onClick={() => router.push(`/?project=${project.id}`)}
+                href={`/?project=${project.id}`}
+                scroll={false}
               >
                 <h3 className="mb-2 font-serif text-xl font-medium text-center text-gray-700 transition-colors dark:text-gray-50 group-hover:text-purple-500 dark:group-hover:text-red-400">
                   {project.name}
@@ -33,19 +35,20 @@ export default function Projects() {
                     height={340}
                   />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       )}
       {projectFromQuery && (
         <div className="flex-col items-center hidden min-h-screen justify-evenly lg:flex">
-          <button
-            onClick={() => router.push("/")}
+          <Link
+            href="/"
             className="hover:text-purple-500 dark:hover:text-red-400"
+            scroll={false}
           >
             back
-          </button>
+          </Link>
           <Project {...projectFromQuery} />
         </div>
       )}
