@@ -22,7 +22,7 @@ export default function Project({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex overflow-hidden rounded-md shadow-sm-white"
+          className="flex overflow-hidden rounded-md shadow-sm-white aspect-video"
         >
           <img src={animated} width={771} height={450} loading="eager" />
         </a>
@@ -33,26 +33,29 @@ export default function Project({
           })}
         >
           <div className="flex flex-col">
-            <div className="flex flex-col items-center justify-between mt-4 lg:flex-row lg:mt-0">
-              <h1 className="mt-4 text-2xl font-bold leading-relaxed text-center lg:my-0 lg:text-6xl lg:text-left lg:mr-4">
+            <div className="flex flex-col items-center justify-between mt-4">
+              <h1 className="mt-4 text-2xl font-bold leading-relaxed text-center lg:my-0 lg:text-4xl lg:text-left lg:mr-4">
                 {name}
               </h1>
-              <div className="flex items-center lg:flex-col">
-                <a
-                  href={repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-purple-500 dark:hover:text-red-400"
-                >
-                  repository
-                </a>
+              <div className="flex items-center text-xs">
+                {repo && (
+
+                  <a
+                    href={repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-purple-500 dark:hover:text-red-400 underline"
+                  >
+                    repository
+                  </a>
+                )}
                 <a
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-4 hover:text-purple-500 dark:hover:text-red-400 lg:ml-0"
+                  className="ml-4 hover:text-purple-500 dark:hover:text-red-400 underline"
                 >
-                  project link
+                  live demo
                 </a>
               </div>
             </div>

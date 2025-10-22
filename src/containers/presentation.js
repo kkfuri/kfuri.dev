@@ -39,21 +39,21 @@ export default function Presentation() {
                   as="li"
                   className="text-xs sm:text-sm lg:text-base"
                 >
-                  lately using react, vue and svelte
+                  lately using react, ts and ai tools
                 </StyledText>
                 <StyledText
                   separator="&"
                   as="li"
                   className="text-xs sm:text-sm lg:text-base"
                 >
-                  learning python & systems design
+                  learning marketing & design
                 </StyledText>
                 <StyledText
-                  separator="&"
+                  separator="❤"
                   as="li"
                   className="text-xs sm:text-sm lg:text-base"
                 >
-                  in love with design & games
+                  in ❤ with beach volleyball
                 </StyledText>
               </ul>
             </div>
