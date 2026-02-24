@@ -25,7 +25,7 @@ export default [
     name: "Lisbon Sun Setters",
     placeholder: "/projects/lss.gif",
     animated: "/projects/lss.gif",
-    link: "https://lisbon-sun-setters.vercel.app/",
+    link: "https://sunset-spike.up.railway.app/",
     description: `A comprehensive <strong>sports club management platform</strong> for managing tournaments, trainings, and member subscriptions in real-time.
     <br />
     Developed with <strong>React</strong> and <strong>TypeScript</strong> using <strong>Vite</strong>, styled with <strong>TailwindCSS</strong> and <strong>shadcn/ui</strong> components. State management powered by <strong>React Query</strong>. The backend was built with <strong>FastAPI</strong> and <strong>SQLAlchemy</strong>, using <strong>PostgreSQL</strong> as the database. Payment processing integrated with <strong>Stripe</strong> for subscriptions and event payments.`,
